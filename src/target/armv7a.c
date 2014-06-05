@@ -173,7 +173,7 @@ static int armv7a_read_ttbcr(struct target *target)
 		/*  ARM DDI 0344H , ARM DDI 0407F */
 		armv7a->armv7a_mmu.ttbr0_mask  = 7 << (32 - ((ttbcr & 0x7)));
 		/*  fix me , default is hard coded LINUX border  */
-		armv7a->armv7a_mmu.os_border = 0xc0000000;
+		armv7a->armv7a_mmu.os_border = 0x00000000;
 	}
 
 	LOG_DEBUG("ttbr1 %s, ttbr0_mask %" PRIx32,
